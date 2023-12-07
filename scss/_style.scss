@@ -1,15 +1,26 @@
 header{
     height: 84px;
+    padding-top: 10px;
     .container{
        @include mycontainer;
        display: flex;
        justify-content: space-between;
        align-items: center;
+       i{
+        display: none;
+        @media (max-width: 750px) {
+            display: inline;
+            
+        }
+       }
         ul{
             width: 600px;
             display: flex;
             justify-content: space-around;
             align-items: center;
+            @media (max-width: 750px) {
+                display: none;
+            }
             a{
                 color: #636060;
                 font-family: 'Hedvig Letters Sans', sans-serif;
@@ -45,7 +56,7 @@ header{
             line-height: normal;
             margin-bottom: 31px;
          }
-        h2{
+         h2{
             color: #FFF;
             font-family: 'Hedvig Letters Sans', sans-serif;
             font-size: 19px;
@@ -62,6 +73,8 @@ header{
         @include mycontainer;
         display: flex;
         justify-content: space-between;
+        gap: 50px;
+      
         div{
             width: 235px;
             h4{
@@ -98,31 +111,37 @@ header{
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
-            // border: 3px solid red;
+            gap: 20px;
+
+            @media (max-width: 880px) {
+                display: flex;
+                justify-content: flex-end;
+            }
             div{
                 width: 286px;
                 margin-bottom: 56px;
-                img{
-                    object-fit: cover;
-                }
-                h5{
-                    color: #343232;
-                    font-family: 'Hedvig Letters Sans', sans-serif;
-                    font-size: 19px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: normal;
-                    margin-top: 23px;
-                    margin-bottom: 9px;
-                }
-                p{
-                    color: #636060;
-                    font-family: 'Hedvig Letters Sans', sans-serif;
-                    font-size: 18px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: normal;
-                }
+
+                    img{
+                        object-fit: cover;
+                    }
+                    h5{
+                        color: #343232;
+                        font-family: 'Hedvig Letters Sans', sans-serif;
+                        font-size: 19px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                        margin-top: 23px;
+                        margin-bottom: 9px;
+                    }
+                    p{
+                        color: #636060;
+                        font-family: 'Hedvig Letters Sans', sans-serif;
+                        font-size: 18px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                    }
 
             }
         }
